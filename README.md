@@ -1,47 +1,42 @@
-# BarkiOS-Gestion-de-Productos
-Modulo funcional crud para la asignacion de programación
+# 👔 BarkiOS - Sistema de Gestión de Productos (Docker + XAMPP)  
 
 ![Docker](https://img.shields.io/badge/Docker-✓-blue?logo=docker)  
+![XAMPP](https://img.shields.io/badge/XAMPP-Compatible-FB7A24?logo=xampp)  
 ![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?logo=php)  
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql)  
+
 
 ## 📌 Tabla de Contenidos  
 - [Descripción](#-descripción)  
 - [Tecnologías](#-tecnologías)  
-- [Instalación](#-instalación)  
+- [Instalación con Docker](#-instalación-con-docker)  
+- [Instalación con XAMPP](#-instalación-con-xampp)  
 - [Estructura](#-estructura-del-proyecto)  
 - [Uso](#-uso)   
 - [Licencia](#-licencia)  
-
-## 🌟 Descripción  
-**BarkiOS** es un sistema completo para la gestión de tiendas de ropa que incluye:  
-
-- 🛒 Plataforma de e-commerce  
-- 📦 Gestión de productos
-- Rama Main es donde esta en docker
-- Rama Xampp es donde esta en xampp
-
 
 ## 🛠️ Tecnologías  
 ```plaintext
 Backend: PHP 8.2 + Composer  
 Frontend: Bootstrap 5 + Vanilla JS  
 Base de datos: MySQL 8.0  
-Infraestructura: Docker + Apache  
-Herramientas: phpMyAdmin, Beekeeper Studio  
+Entornos: Docker (producción) | XAMPP (desarrollo)  
+Herramientas: phpMyAdmin (ambos entornos)  
 ```  
 
-## 💻 Instalación  
+## 🐳 Instalación con Docker  
 
 ### Requisitos  
 ```powershell
-# Verificar instalación de Docker
 docker --version
 docker-compose --version
 ```
 
 ### Pasos  
-1. Clonar repositorio  
+1. Clonar repositorio (rama main):  
+   ```bash
+   git clone git@github.com:Eltarao/BarkiOS-Gestion-de-Productos.git
+   ```  
 2. Configurar entorno:  
    ```powershell
    cp .env.example .env
@@ -49,7 +44,30 @@ docker-compose --version
 3. Iniciar contenedores:  
    ```powershell
    docker-compose up -d --build
+   ```
+3. Importar DB:  
+   ```sql
+   source database/barkios_db(backup 19-05-2025).sql
+   ``` 
+
+## 🛠️ Instalación con XAMPP  
+
+### Requisitos  
+- XAMPP 8.2+  
+- MySQL 8.0  
+
+### Pasos  
+1. Clonar rama xampp:  
+   ```bash
+   git clone -b git@github.com:Eltarao/BarkiOS-Gestion-de-Productos.git
    ```  
+2. Mover proyecto a `htdocs`  
+3. Importar DB:  
+   ```sql
+   source database/productos.sql
+   ```  
+4. Configurar `config/database.php`  
+  
 
 ## 📂 Estructura del Proyecto  
 ```bash
@@ -73,16 +91,6 @@ Xampp
 ```plaintext
 http://localhost/BarkiOS-Gestion-de-Productos/app/views/admin/products-admin.php
 ```  
-
-**Comandos útiles:**  
-```powershell
-# Ejecutar migraciones
-docker-compose exec app php migrations.php
-
-# Ver logs
-docker-compose logs -f app
-```  
-
 
 ## 📜 Licencia  
 MIT License - Ver [LICENSE](LICENSE) para detalles.  
