@@ -65,8 +65,7 @@ BarkiOS/
 ## 🖥️ Uso  
 **Accesos después de instalación:**  
 ```plaintext
-URL: http://localhost:8080  
-phpMyAdmin: http://localhost:8000 (root/root)  
+http://localhost:9080/app/views/admin/products-admin.php
 ```  
 
 **Comandos útiles:**  
