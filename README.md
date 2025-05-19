@@ -10,8 +10,7 @@ Modulo funcional crud para la asignacion de programación
 - [Tecnologías](#-tecnologías)  
 - [Instalación](#-instalación)  
 - [Estructura](#-estructura-del-proyecto)  
-- [Uso](#-uso)  
-- [Despliegue](#-despliegue)   
+- [Uso](#-uso)   
 - [Licencia](#-licencia)  
 
 ## 🌟 Descripción  
@@ -19,6 +18,8 @@ Modulo funcional crud para la asignacion de programación
 
 - 🛒 Plataforma de e-commerce  
 - 📦 Gestión de productos
+- Rama Main es donde esta en docker
+- Rama Xampp es donde esta en xampp
 
 
 ## 🛠️ Tecnologías  
@@ -64,8 +65,13 @@ BarkiOS/
 
 ## 🖥️ Uso  
 **Accesos después de instalación:**  
+Docker
 ```plaintext
 http://localhost:9080/app/views/admin/products-admin.php
+```
+Xampp
+```plaintext
+http://localhost/BarkiOS-Gestion-de-Productos/app/views/admin/products-admin.php
 ```  
 
 **Comandos útiles:**  
@@ -77,12 +83,6 @@ docker-compose exec app php migrations.php
 docker-compose logs -f app
 ```  
 
-## 🚢 Despliegue  
-1. Configurar dominio en `.env`  
-2. Optimizar autoload:  
-   ```powershell
-   composer dump-autoload -o
-   ```  
 
 ## 📜 Licencia  
 MIT License - Ver [LICENSE](LICENSE) para detalles.  
