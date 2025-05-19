@@ -1,6 +1,6 @@
 {
     "name": "products/products",
-    "description": "Modulo funcional crud para la asignacion de programacion",
+    "description": "Modulo funcional crud en xampp para la asignacion de programacion",
     "type": "project",
     "autoload": {
         "psr-4": {
