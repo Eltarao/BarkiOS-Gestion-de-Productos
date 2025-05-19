@@ -197,7 +197,8 @@ switch ($action) {
                             <select class="form-select" name="categoria" required>
                                 <option value="Formal">Formal</option>
                                 <option value="Casual">Casual</option>
-                                <option value="Ujum">Ujum</option>
+                                <option value="Invierno">Invierno</option>
+                                <option value="Verano">Verano</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -206,11 +207,14 @@ switch ($action) {
                                 <option value="vestidos">Vestidos</option>
                                 <option value="blusas">Blusas</option>
                                 <option value="pantalones">Pantalones</option>
+                                <option value="pantalones">Faldas</option>
+                                <option value="pantalones">Camisas</option>
+                                <option value="pantalones">Franelas</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Precio</label>
-                            <input type="number" step="0.01" class="form-control" name="precio" required>
+                            <input type="number" step="0.01" class="form-control" name="precio" placeholder="Ingrese el precio de la prenda" required>
                         </div>
                     </div>
                     <div class="modal-footer">
