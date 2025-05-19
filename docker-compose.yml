@@ -1,7 +1,8 @@
 version: '3.8'
 
 services:
-  barkios-gestion-de-productos:  # Cambiado de 'app' a 'barkios-app'
+  barkios-productos: 
+    container_name: barkios_productos # Cambiado de 'app' a 'barkios-app'
     build: .
     ports:
       - "9080:80"  # Cambiado de 8080 a 9080

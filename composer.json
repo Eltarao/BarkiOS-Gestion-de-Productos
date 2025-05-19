@@ -1,17 +1,16 @@
 {
-    "name": "barkios/barkios",
-    "description": "Proyecto BarkiOs - Sistema de gestión",
+    "name": "products/products",
+    "description": "Modulo funcional crud para la asignacion de programacion",
     "type": "project",
-    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Barkios\\Barkios\\": "app/"
+            "Products\\Products\\": "app/"
         }
     },
     "authors": [
         {
-            "name": "Nokx1z",
-            "email": "enyelldev@gmail.com"
+            "name": "Cristopher Aguilar",
+            "email": "cristopherjesus2021@gmail.com"
         }
     ],
     "minimum-stability": "stable",
